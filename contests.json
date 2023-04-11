@@ -1,0 +1,14 @@
+{
+    "1813": {
+        "id": 1813,
+        "name": "ICPC 2023 Online Spring Challenge powered by Huawei",
+        "type": "IOI",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 1209600,
+        "startTimeSeconds": 1681383600,
+        "relativeTimeSeconds": -213429,
+        "first_msg": false,
+        "second_msg": false
+    }
+}
