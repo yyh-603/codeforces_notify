@@ -45,6 +45,6 @@ contests['id'] = contest
 
 ### alive.py
 
-程式來自(這裡)[https://ithelp.ithome.com.tw/m/articles/10273878?fbclid=IwAR29vAjutcjIbvTCseiXhufU6FkTbGrkz4X5YI1OuxufcJndRogpm4BzSJA)
+程式來自 [這裡](https://ithelp.ithome.com.tw/m/articles/10273878?fbclid=IwAR29vAjutcjIbvTCseiXhufU6FkTbGrkz4X5YI1OuxufcJndRogpm4BzSJA)
 
 用於使機器人隨時在線
