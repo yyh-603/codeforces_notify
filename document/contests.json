@@ -1,0 +1,50 @@
+{
+    "1817": {
+        "id": 1817,
+        "name": "Codeforces Round (Div. 1)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 8100,
+        "startTimeSeconds": 1682778900,
+        "relativeTimeSeconds": -1032664,
+        "first_msg": false,
+        "second_msg": false
+    },
+    "1818": {
+        "id": 1818,
+        "name": "Codeforces Round (Div. 2)",
+        "type": "CF",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 8100,
+        "startTimeSeconds": 1682778900,
+        "relativeTimeSeconds": -1032664,
+        "first_msg": false,
+        "second_msg": false
+    },
+    "1821": {
+        "id": 1821,
+        "name": "Educational Codeforces Round 147 (Rated for Div. 2)",
+        "type": "ICPC",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 8100,
+        "startTimeSeconds": 1682001300,
+        "relativeTimeSeconds": -255064,
+        "first_msg": false,
+        "second_msg": false
+    },
+    "1822": {
+        "id": 1822,
+        "name": "Codeforces Round 867 (Div. 3)",
+        "type": "ICPC",
+        "phase": "BEFORE",
+        "frozen": false,
+        "durationSeconds": 8100,
+        "startTimeSeconds": 1682346900,
+        "relativeTimeSeconds": -600664,
+        "first_msg": false,
+        "second_msg": false
+    }
+}
