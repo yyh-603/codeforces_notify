@@ -2,7 +2,8 @@ from core.classes import Cog_Extension
 import asyncio
 from function.update import update
 import json
-from function.message import generate_embed
+from function.message import generate_notice_embed
+import time
 
 FIRST_MESSAGE_TIME = 86400
 SECOND_MESSAGE_TIME = 600
@@ -36,7 +37,7 @@ class Task(Cog_Extension):
                     # contest start in one day
                     if -FIRST_MESSAGE_TIME <= contests[i]['relativeTimeSeconds'] and contests[i]['first_msg'] == False:
                         contests[i]['first_msg'] = True
-                        embed = generate_embed(contests[i])
+                        embed = generate_notice_embed('競賽通知', contests[i])
                         for obj in channels:
                             channel = self.bot.get_channel(obj['id'])
                             await channel.send(obj['notice'] + ' 競賽在一天後開始，記得註冊')
@@ -46,7 +47,7 @@ class Task(Cog_Extension):
                     # contest start in 10 minutes
                     elif -SECOND_MESSAGE_TIME <= contests[i]['relativeTimeSeconds'] and contests[i]['second_msg'] == False:
                         contests[i]['second_msg'] = True
-                        embed = generate_embed(contests[i])
+                        embed = generate_notice_embed('競賽通知', contests[i])
                         for obj in channels:
                             channel = self.bot.get_channel(obj['id'])
                             await channel.send(obj['notice'] + ' 競賽在10分鐘後開始，記得註冊')
@@ -60,7 +61,7 @@ class Task(Cog_Extension):
                 # erase contest NOT 'BEFORE'
                 with open('document/contests.json', 'w+') as file:
                     file.write(json.dumps(new_list, indent=4))
-                print('---------------------------')
+                print("at " + time.strftime("%Y/%m/%d %H:%M:%S", time.localtime()) + " uptade")
                 await asyncio.sleep(5)
     
         self.bg_task = self.bot.loop.create_task(interval())

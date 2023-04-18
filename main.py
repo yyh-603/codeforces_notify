@@ -7,7 +7,7 @@ from discord.ext import commands
 intents = discord.Intents.all()
 intents.messages = True
 
-bot = commands.Bot(command_prefix='!', intents = intents)
+bot = commands.Bot(command_prefix='!',help_command=commands.MinimalHelpCommand() , intents = intents)
 
 TOKEN = os.environ['CODEFORCES_NOTIFY_TOKEN']
 
