@@ -1,60 +1,31 @@
 # CodeForces Notify
 
+**2023/04/25更新**
+
 ## 功能
 
-競賽一天前及十分鐘前會發送訊息到指定頻道，提醒競賽時間。
+### 競賽通知
 
-## 各檔案說明
+:::success
+cogs/task.py
+:::
 
-### main.py
+機器人會在特定時間(目前為競賽開始一天前與15分鐘前)發送訊息到指定的頻道，並tag特定身分組。
 
-主程式，執行機器人及發送訊息等功能。
+### 競賽查詢
 
-### update.py
+:::success
+cogs/getlist.py
+:::
 
-爬取競賽資訊，更新至contests.json
+1. !recent：查詢最近競賽列表
+2. !next：查詢最近的競賽
+3. !id {競賽id}：查詢特定id競賽資訊
 
-### contests.json
+### 彩蛋
 
-儲存競賽
+:::success
+cogs/easteregg.py
+:::
 
-競賽資訊範例如下
-contests['id'] = contest
-```json
-"1813": {
-        "id": 1813,
-        "name": "ICPC 2023 Online Spring Challenge powered by Huawei",
-        "type": "IOI",
-        "phase": "BEFORE",
-        "frozen": false,
-        "durationSeconds": 1209600,
-        "startTimeSeconds": 1681383600,
-        "relativeTimeSeconds": -38355,
-        "first_msg": true,
-        "second_msg": false
-    }
-```
-
-### message.py
-
-產生Discord訊息
-
-### channels.json
-
-儲存每個要通知的頻道
-
-### alive.py
-
-程式來自 [這裡](https://ithelp.ithome.com.tw/m/articles/10273878?fbclid=IwAR29vAjutcjIbvTCseiXhufU6FkTbGrkz4X5YI1OuxufcJndRogpm4BzSJA)
-
-用於使機器人隨時在線
-
----
-
-2023/04/17 更新
-
-1. 更改專案架構
-
-2. 增加prefix_command
-    (1) !list：列出當前競賽
-    (2) !next：列出最近競賽
+就是...彩蛋？

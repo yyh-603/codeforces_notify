@@ -9,8 +9,11 @@ def update():
         # get information
         url = "https://codeforces.com/api/contest.list?"
         response = requests.get(url)
+        
         contests = BeautifulSoup(response.text, 'html5lib')
         temp = contests.find('body').getText()
+        #print(temp)
+
         contests = temp
         # json to list
         contests = json.loads(contests)

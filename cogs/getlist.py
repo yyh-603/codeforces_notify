@@ -7,9 +7,7 @@ import asyncio
 
 class GetList(Cog_Extension):
 
-    @commands.Cog.listener()
-    async def on_ready(self):
-        print('GetList is ready')
+
 
     @commands.command()
     async def recent(self, ctx):
@@ -19,11 +17,6 @@ class GetList(Cog_Extension):
         channel = ctx.channel
         embed = generate_list_embed(contests)
         await channel.send(embed=embed)
-        # for i in contests.keys():
-        #     print(contests[i])
-        #     embed = generate_notice_embed(contests[i])
-        #     await channel.send(embed=embed)
-        #     await asyncio.sleep(0.5)
             
     @commands.command()
     async def next(self, ctx):
